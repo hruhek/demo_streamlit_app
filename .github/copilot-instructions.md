@@ -2,7 +2,7 @@
 
 ## Project Overview
 - This is a minimal Python application template designed for Streamlit integration and rapid prototyping.
-- The main entry point is `main.py`, which currently prints a greeting. No Streamlit code is present yet, but the project is structured for easy extension.
+- The main entry point is `main.py`, which currently prints a greeting. 
 - Project metadata and dependencies are managed via `pyproject.toml`. No external dependencies are currently specified.
 - Uses `uv` for fast Python package management and virtual environment handling.
 
@@ -21,11 +21,7 @@
   uv add <package-name>          # Regular dependency
   uv add --dev <package-name>    # Development dependency
   ```
-- **Run the basic app:**
-  ```bash
-  uv run main.py
-  ```
-- **Run as Streamlit app (after adding streamlit):**
+- **Run as Streamlit app:**
   ```bash
   uv run streamlit run main.py
   ```
@@ -47,12 +43,9 @@ To add a basic Streamlit UI:
 ```python
 import streamlit as st
 
-def main():
-    st.title("Demo Streamlit App")
-    st.write("Hello from Streamlit!")
+st.title("Demo Streamlit App")
+st.write("Hello from Streamlit!")
 
-if __name__ == "__main__":
-    main()
 ```
 
 ## Guidance for AI Agents
