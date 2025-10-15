@@ -40,14 +40,10 @@ uv add package-name
 
 # Add development dependencies
 uv add --dev pytest
-
-# Install all dependencies
-uv sync
 ```
 
 ## Running the App
 
 ```bash
-# With Streamlit (after adding streamlit dependency)
 uv run streamlit run main.py
 ```
