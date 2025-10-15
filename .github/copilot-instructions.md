@@ -1,28 +1,33 @@
 # Copilot Instructions for demo-streamlit-app
 
 ## Project Overview
-- This is a minimal Python application intended as a demo for Streamlit integration.
+- This is a minimal Python application template designed for Streamlit integration and rapid prototyping.
 - The main entry point is `main.py`, which currently prints a greeting. No Streamlit code is present yet, but the project is structured for easy extension.
 - Project metadata and dependencies are managed via `pyproject.toml`. No external dependencies are currently specified.
+- Uses `uv` for fast Python package management and virtual environment handling.
 
 ## Key Files
 - `main.py`: Application entry point. Extend this file for app logic.
 - `pyproject.toml`: Project configuration, Python version (>=3.13), dependencies.
-- `README.md`: Currently empty. Update with usage, setup, and architecture notes as the project evolves.
+- `README.md`: Comprehensive documentation with setup, development workflows, and Streamlit integration guide.
 
 ## Developer Workflows
-- **Run the app:**
+- **Setup project:**
   ```bash
-  uv run main.py
+  uv sync  # Install dependencies and create virtual environment
   ```
 - **Add dependencies:**
   ```bash
-  uv add <package-name>
+  uv add <package-name>          # Regular dependency
+  uv add --dev <package-name>    # Development dependency
   ```
-  This automatically updates `pyproject.toml` and creates/updates the lockfile.
-- **Install project:**
+- **Run the basic app:**
   ```bash
-  uv sync
+  uv run main.py
+  ```
+- **Run as Streamlit app (after adding streamlit):**
+  ```bash
+  uv run streamlit run main.py
   ```
 - **Testing:**
   - No test framework or test files are present. Add tests in a `tests/` directory and update instructions here if testing is added.
